@@ -7,7 +7,7 @@
     "test": "jest",
     "prepare": "husky",
     "pre-commit": "lint-staged",
-    "test:staged": "jest"
+    "test:staged": "jest --passWithNoTests"
   },
   "keywords": [],
   "author": "",
