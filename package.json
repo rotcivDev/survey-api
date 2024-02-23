@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "prepare": "husky",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "test:staged": "jest"
   },
   "keywords": [],
   "author": "",
