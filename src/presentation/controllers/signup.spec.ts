@@ -7,13 +7,17 @@ type SUTFactory = () => {
   emailValidatorStub: EmailValidator
 }
 
-const makeSUT: SUTFactory = () => {
+const makeEmailValidator = (): EmailValidator => {
   class EmailValidatorStub implements EmailValidator {
     isValid (email: string): boolean {
       return true
     }
   }
-  const emailValidatorStub = new EmailValidatorStub()
+  return new EmailValidatorStub()
+}
+
+const makeSUT: SUTFactory = () => {
+  const emailValidatorStub = makeEmailValidator()
   const SUT = new SignUpController(emailValidatorStub)
   return {
     SUT,
